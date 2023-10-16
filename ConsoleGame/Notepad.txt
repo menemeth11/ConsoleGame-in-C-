@@ -1,0 +1,3 @@
+﻿Console.WriteLine($"Siemaneczko {hero.HeroName} poziomu {hero.HeroLvl}");
+hero.HeroLvl = 1;
+Console.WriteLine($"Siemaneczko {hero.HeroName} poziomu {hero.HeroLvl}");

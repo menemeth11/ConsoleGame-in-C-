@@ -58,5 +58,19 @@ namespace ConsoleGame
             Thread.Sleep(milliseconds);
             Console.Beep();
         }
+
+        public int Menu()
+        {
+            Console.WriteLine("Pick what you want to do?");
+            Console.WriteLine("0. Quit game");
+            Console.WriteLine("1. Hero Preview");
+            Console.WriteLine("2. ");
+            Console.WriteLine("3. ");
+            Console.WriteLine("4. ");
+            Console.WriteLine("5. ");
+            int option = int.Parse(Console.ReadLine());
+            Console.Clear();
+            return option;
+        }
     }
 }

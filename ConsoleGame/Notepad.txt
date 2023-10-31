@@ -1,3 +1,49 @@
-﻿Console.WriteLine($"Siemaneczko {hero.HeroName} poziomu {hero.HeroLvl}");
-hero.HeroLvl = 1;
-Console.WriteLine($"Siemaneczko {hero.HeroName} poziomu {hero.HeroLvl}");
+﻿Przedmioty:
+	Wspólne
+	-Nazwa
+	-Pancerz
+	-Życie
+
+	Helm
+	-odpornosć na kryta
+
+	Zbroja
+	-wzmocnienie leczenia z przedmiotu
+
+	Spodnie
+	-wzmocnienie ataku
+	
+	Buty
+	-mana
+
+	Rękawice
+	-mana
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^GOTOWE
+
+	Miecz
+	-nazwa
+	-atak
+	-szansa na krytyk
+
+	Scroll
+	-nazwa
+	-koszt many
+	-brazenia
+	-ilosc użyć
+
+
+Gracz:
+	HeroName
+	HeroLVL
+	HeroLife
+	HeroExp
+
+	HeroAttac
+	HeroDeff
+	HeroCritChance
+	HeroCritDeff
+
+	HeroHeal przedmioty list
+	HeroScrolls scrole magi do wyboru list
+	HeroItem wszystkie przedmioty w eq
+	HeroEQ wyposazone przedmioty

@@ -1,4 +1,8 @@
-﻿namespace ConsoleGame
+﻿using ConsoleGame.EQParts;
+using System;
+using System.ComponentModel.Design;
+
+namespace ConsoleGame
 {
     internal class Program
     {
@@ -6,23 +10,37 @@
         {
             Game RPGConsole = new Game("RPGConsole");
             //RPGConsole.Start();
+            Console.WriteLine("Podaj nazwę swojego bohatera!");
+            string NameForHero = "Bob"; //Console.ReadLine();
+            Hero hero = new Hero(NameForHero);
 
-            Hero hero = new Hero("Bob");
+            while (true)
+            {
+                int option = RPGConsole.Menu();
 
-            Item miecz = new Item("Super Miecz", Item.EQTypes.zbroja, 10);
-            Item miecz2 = new Item("Super Miecz2", Item.EQTypes.zbroja, 12);
-            Item czapka = new Item("Niewidka", Item.EQTypes.helm, 12);
+                switch (option)
+                {
+                    case 0:
+                        
+                        break;
+                    case 1:
+                        hero.HeroMenu();
+                        break;
 
-            hero.ShowEQ();
-            hero.GetItem(miecz);
-            hero.ShowEQ();
-            //hero.GetItem(czapka);
-            //hero.ShowEQ();
-            hero.GetItem(miecz2);
-            hero.ShowEQ();
-            hero.Unequip(miecz);
-            hero.GetItem(miecz2);
-            hero.ShowEQ();
+                    case 2:
+                        break;
+
+                    case 3:
+                        break;
+
+                    case 4:
+                        break;
+
+                    case 5:
+                        break;
+
+                }
+            }
         }
     }
 }

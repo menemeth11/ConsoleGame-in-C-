@@ -83,7 +83,7 @@ namespace ConsoleGame
             //Console.Clear();
             return option;
         }
-
+        //1
         private void ShowStats()
         {
             Console.WriteLine("Statystki:");
@@ -106,7 +106,7 @@ namespace ConsoleGame
             }
             Console.Write("]");
         }
-
+        //3
         private void DressUp()
         {
             Console.WriteLine("Give number of item to wear: ");
@@ -169,19 +169,49 @@ namespace ConsoleGame
                 HeroMana += gloves[0].Mana;
             }                
         }
-
+        //5
         private void LookAllItems()
         {
-            int count = 0;
-            foreach(object item in HeroItems)
+            List<Helm> helms = HeroItems.OfType<Helm>().ToList();
+            List<Chestplate> chestplates = HeroItems.OfType<Chestplate>().ToList();
+            List<Pants> pants = HeroItems.OfType<Pants>().ToList();
+            List<Shoes> shoes = HeroItems.OfType<Shoes>().ToList();
+            List<Gloves> gloves = HeroItems.OfType<Gloves>().ToList();
+            List<string> titles = new List<string>
             {
-                Console.WriteLine("Number {0}", count);
-                ((IItems)item).ShowDetals();
-                Console.WriteLine();
-                count++;
+                "Number", "Name", "Armor", "Life", "Increase Heal", "Increase Attack", "Mana", "Crit Deff"
+            };
+
+
+            /* Console.WriteLine("+----------+----------+----------+----------+---------------+----------------+------+");
+             Console.WriteLine("|Number:   |Name:     |Armor:    |Life:     |Increase Heal: |Increase Attac: |Mana: |");
+             Console.WriteLine("+----------+----------+----------+----------+---------------+----------------+------+");     */
+
+            int count = 0;
+            /*Console.WriteLine("Number {0}", count);
+            ((IItems)item).ShowDetals();
+            Console.WriteLine();*/
+
+            int szerokoscKolumny = titles.Max(n => n.Length) + 2;
+            int szerokoscNaglowka = szerokoscKolumny * titles.Count + titles.Count + 1;
+
+            Console.WriteLine(new string('+', szerokoscNaglowka));
+            Console.Write("|");
+            for (int i = 0; i < titles.Count; i++)
+            {
+                Console.Write($" {titles[i].PadRight(szerokoscKolumny)} |");
+            }
+            Console.WriteLine("\n" + new string('+', szerokoscNaglowka));
+
+
+
+            foreach (Helm helm in helms)
+            {
+
             }
             count = 0;
         }
+        //6
         private void Generuj()
         {
             Helm helm1 = new Helm("Dobry Helm", 10, 5, 1.2);
